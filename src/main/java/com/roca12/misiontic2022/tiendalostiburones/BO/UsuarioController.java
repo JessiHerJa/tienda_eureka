@@ -46,10 +46,13 @@ public class UsuarioController {
 		Dao.eliminarUsuario(cedula_usuario);
 	}
 	
-	@PutMapping("/actualizarusuarios")
+
+	
+	
+	@PutMapping("/actualizarUsuarios")
 	public void actualizarUsuario(UsuarioVO user) {
 		UsuarioDAO Dao = new UsuarioDAO();
-		Dao.registrarUsuario(user);
+		Dao.actualizarUsuario(user);
 	}
 	
 	

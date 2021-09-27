@@ -78,3 +78,40 @@ body{
 .registrarse{
   margin-top:10px;
 }
+.bg-primary{
+background-color:rgb(0 0 0 / 50%)!important;
+}
+.navbar{
+	padding-left:20;
+}
+
+
+.alert-warning{
+	color:#000;
+	background-color:#f9c0b3;
+}
+
+.titulo h2{
+	text-align:center;
+}
+.container-opciones{
+width:75%;
+margin:auto;
+}
+
+.table{
+	background-color:#ffffff!important;
+	border-radius:20px!important;
+}
+#form1{
+	margin:auto;
+	width:80%;
+	background-color:#fff;
+	padding:40px 70px 20px;
+	border-radius:20px;
+}
+
+.input-group-text{
+	line-height:10px;
+}
+

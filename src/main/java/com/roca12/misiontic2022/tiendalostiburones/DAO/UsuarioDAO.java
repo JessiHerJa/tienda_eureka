@@ -196,6 +196,10 @@ public class UsuarioDAO {
 		}
 
 	}
+	
+	
+	
+	
 
 	public void actualizarUsuario(UsuarioVO user) {
 		

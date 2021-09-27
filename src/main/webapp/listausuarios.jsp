@@ -10,7 +10,7 @@
 <!-- Tamaño de la pantalla -->
 <meta name="viewport" content="width=device-width">
 <!-- titulo de la pestaña -->
-<title>Lista de usuarios</title>
+<title>Lista usuarios</title>
 <!-- bootstrap-->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -36,7 +36,7 @@
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 				var usuarios = JSON.parse(xmlhttp.responseText);
-				var tbltop = "<table class='table table-dark table-striped'><tr><th>Cedula</th><th>Email</th><th>Nombre</th><th>Password</th><th>Usuario</th></tr>";
+				var tbltop = "<table class='table table-striped table-hover'><tr><th>Cedula</th><th>Email</th><th>Nombre</th><th>Password</th><th>Usuario</th></tr>";
 				var main = "";
 				for (i = 0; i < usuarios.length; i++) {
 					main += "<tr><td>" + usuarios[i].cedula_usuario
@@ -94,38 +94,13 @@
 		</div>
 	</nav>
 	
-	<br>		
-	<div class="container">
-
-	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
-		<i class="fas fa-chalkboard-teacher"></i> Agregar usuario
-	</button>
-	
-	<button type="button" class="btn btn-secondary">
-		<i class="fas fa-window-close"></i> Eliminar usuario
-	</button>
-	
-	<button type="button" class="btn btn-success">
-		<i class="fas fa-external-link-square-alt"></i> Actualizar usuario
-	</button>
-	
-	<button type="button" class="btn btn-danger">
-		<i class="fas fa-search-plus"></i> Buscar usuario
-	</button>
-	
-	<button type="button" class="btn btn-warning">
-		<i class="fas fa-clipboard"></i> Listar todos los usuarios
-	</button>
-	
-	</div>
 	
 	<!-- contenido  -->
-	<br>
-	<div style="padding-left: 5px;">
+	
 	
 		
 		<div class="alert alert-warning" role="alert">
-		  <h1 ><i class="fas fa-table"></i> Tabla de usuarios</h1>
+		  <h2 style="text-align:center;"><i class="fas fa-table"></i> Tabla de usuarios</h2>
 		</div>
 			<div class="container">
 				<div class="row">
@@ -138,7 +113,35 @@
 			</div>
 	
 			
+	
+	
+	<br>		
+	<div class="container-opciones">
+
+	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
+		<i class="fas fa-chalkboard-teacher"></i> Agregar usuario
+	</button>
+	
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarusuario.jsp'">
+		<i class="fas fa-window-close"></i> Eliminar usuario
+	</button>
+	
+	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarusuario.jsp'">
+		<i class="fas fa-external-link-square-alt"></i> Actualizar usuario
+	</button>
+	
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarusuario.jsp'">
+		<i class="fas fa-search-plus"></i> Buscar usuario
+	</button>
+	
+	<button type="button" class="btn btn-warning">
+		<i class="fas fa-clipboard"></i> Listar todos los usuarios
+	</button>
+	
 	</div>
+	
+	
+	<br>
 
 
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">

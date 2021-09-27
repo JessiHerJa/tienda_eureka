@@ -35,7 +35,7 @@
 <body>
 	<!-- Navbar-->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Tienda Eureka</a>
+  <a class="navbar-brand" href="#"> Tienda Eureka</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -67,30 +67,7 @@
 	</nav>
 	
 	
-	<br>		
-	<div class="container">
-
-	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
-		<i class="fas fa-chalkboard-teacher"></i> Agregar usuario
-	</button>
 	
-	<button type="button" class="btn btn-secondary">
-		<i class="fas fa-window-close"></i> Eliminar usuario
-	</button>
-	
-	<button type="button" class="btn btn-success">
-		<i class="fas fa-external-link-square-alt"></i> Actualizar usuario
-	</button>
-	
-	<button type="button" class="btn btn-danger">
-		<i class="fas fa-search-plus"></i> Buscar usuario
-	</button>
-	
-	<button type="button" class="btn btn-warning">
-		<i class="fas fa-clipboard"></i> Listar todos los usuarios
-	</button>
-	
-	</div>
 	
 	<!-- contenido  -->
 
@@ -98,7 +75,7 @@
 	
 	
 	<div class="alert alert-warning" role="alert">
-		  <h1 ><i class="fas fa-table"></i> Datos del nuevo usuario</h1>
+		  <h2 style="text-align:center;" ><i class="fas fa-table"></i> Datos del nuevo usuario</h2>
 		</div>
 	
 	
@@ -114,53 +91,77 @@
 
 			<form id="form1">
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon1">Cedula</span> <input
+					<span class="input-group-text" id="basic-addon1">Cédula</span> <input
 						type="text" class="form-control"
-						placeholder="Inserte cedula aqui..."
+						placeholder="  Inserte su cédula aquí"
 						aria-describedby="basic-addon1" required id="cedula_usuario">
 				</div>
 
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon2">Email</span> <input
+					<span class="input-group-text" id="basic-addon2">Correo</span> <input
 						type="text" class="form-control"
-						placeholder="Inserte email aqui..."
+						placeholder="  Inserte su correo aquí."
 						aria-describedby="basic-addon2" required id="email_usuario">
 				</div>
 
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon3">Nombrecompleto</span>
+					<span class="input-group-text" id="basic-addon3">Nombre Completo</span>
 					<input type="text" class="form-control"
-						placeholder="Inserte nonbre aqui..."
+						placeholder="  Inserte su nombre aquí"
 						aria-describedby="basic-addon3" required id="nombre_usuario">
 				</div>
 
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon4">Username</span> <input
 						type="text" class="form-control"
-						placeholder="Inserte username aqui..."
+						placeholder="  Inserte username aquí"
 						aria-describedby="basic-addon4" required id="user">
 				</div>
 
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon5">Password</span> <input
 						type="text" class="form-control"
-						placeholder="Inserte password aqui..."
+						placeholder="  Inserte password aqui..."
 						aria-describedby="basic-addon5" required id="password">
 				</div>
-
-
-
+				
+				<button type="button" class="btn btn-success" onclick="enviar()">
+				<i class="fas fa-check"></i> Insertar nuevo usuario
+				</button>
 
 
 			</form>
 
-			<button type="button" class="btn btn-success" onclick="enviar()">
-				<i class="fas fa-check"></i> Insertar nuevo usuario
-			</button>
+			
 
 
 			
 		</div>
+		
+		<br>		
+	<div class="container-opciones">
+
+	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
+		<i class="fas fa-chalkboard-teacher"></i> Agregar usuario
+	</button>
+	
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarusuario.jsp'">
+		<i class="fas fa-window-close"></i> Eliminar usuario
+	</button>
+	
+	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarusuario.jsp'" >
+		<i class="fas fa-external-link-square-alt"></i> Actualizar usuario
+	</button>
+	
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarusuario.jsp'">
+		<i class="fas fa-search-plus"></i> Buscar usuario
+	</button>
+	
+	<button type="button" class="btn btn-warning">
+		<i class="fas fa-clipboard"></i> Listar todos los usuarios
+	</button>
+	
+	</div>
 
 	</div>
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">

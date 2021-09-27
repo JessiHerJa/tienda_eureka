@@ -10,7 +10,7 @@
 <!-- Tamaño de la pantalla -->
 <meta name="viewport" content="width=device-width">
 <!-- titulo de la pestaña -->
-<title>Insertando cliente</title>
+<title>Actualizar clientes</title>
 <!-- bootstrap-->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -52,7 +52,7 @@
 		<div class="container">
 			<a class="navbar-brand links" href="listausuarios.jsp"> <i
 				class="fas fa-users"></i> Usuarios
-			</a> <a class="navbar-brand links" href="listaclientes.jsp"> <i
+			</a> <a class="navbar-brand links" href="listausuarios.jsp"> <i
 				class="fas fa-address-book"></i> Clientes
 			</a> <a class="navbar-brand links" href="listausuarios.jsp"> <i
 				class="fas fa-truck"></i> Proveedores
@@ -65,164 +65,167 @@
 			</a>
 		</div>
 	</nav>
+	<div class="alert alert-warning" role="alert">
+
+		<h2 style="text-align:center;">
+			<i class="fas fa-sync"></i> Datos a actualizar del clientes
+		</h2>
+	</div>
+		
 	
-
-	<div style="padding-left: 5px">
 		
-		
-		<div class="alert alert-warning" role="alert">
-		  <h2 style="text-align:center;"><i class="fas fa-table"></i> Datos del nuevo cliente</h2>
-		</div>
-
 		<div class="container">
-		
-		
+
+
 			<div id="error" class="alert alert-danger visually-hidden"
-					role="alert">Error al crear el cliente, verifique que no exista un cliente con la cedula dada</div>
-					
+				role="alert">Error al actualizar el cliente, verifique que la cédula y cliente dados sean validos</div>
+
 			<div id="correcto" class="alert alert-success visually-hidden"
-				role="alert">Cliente creado con éxito</div>
+				role="alert">cliente actualizado con éxito</div>
 
 			<form id="form1">
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1">Cédula</span> <input
 						type="text" class="form-control"
-						placeholder="  Inserte su cédula aquí"
+						placeholder="Inserte cédula aqui..."
 						aria-describedby="basic-addon1" required id="cedula_cliente">
 				</div>
 
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon2">Teléfono</span> <input
 						type="text" class="form-control"
-						placeholder="  Inserte su télefono aquí"
+						placeholder="Inserte télefono aqui..."
 						aria-describedby="basic-addon2" required id="telefono_cliente">
 				</div>
 
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon3">Nombre Completo</span>
+					<span class="input-group-text" id="basic-addon3">Nombre completo</span>
 					<input type="text" class="form-control"
-						placeholder="  Inserte su nombre aquí"
+						placeholder="Inserte nombre aqui..."
 						aria-describedby="basic-addon3" required id="nombre_cliente">
 				</div>
 
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon4">Correo</span> <input
+					<span class="input-group-text" id="basic-addon4">Correo Cliente</span> <input
 						type="text" class="form-control"
-						placeholder="  Inserte su correo aquí"
+						placeholder="Inserte correo aqui..."
 						aria-describedby="basic-addon4" required id="correo_cliente">
 				</div>
 
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon5">Dirección</span> <input
+					<span class="input-group-text" id="basic-addon5">Direccion cliente</span> <input
 						type="text" class="form-control"
-						placeholder="  Inserte dirección aquí"
+						placeholder="Inserte direccion aqui..."
 						aria-describedby="basic-addon5" required id="direccion_cliente">
 				</div>
-				
-				<button type="button" class="btn btn-success" onclick="enviar()">
-				<i class="fas fa-check"></i> Insertar nuevo cliente
+				<button type="button" class="btn btn-warning" onclick="actualizar()">
+				<i class="fas fa-edit"></i> Actualizar cliente
 				</button>
-
 			</form>
+			</div>
 
-		
 			
-			
-		</div>
 
-	</div>
-	<br>		
+				<br>		
 	<div class="container-opciones">
 
-	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarcliente.jsp'">
-		<i class="fas fa-chalkboard-teacher"></i> Agregar cliente
+	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
+		<i class="fas fa-chalkboard-teacher"></i> Agregar usuario
 	</button>
 	
-	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarcliente.jsp'">
-		<i class="fas fa-window-close"></i> Eliminar cliente
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarusuario.jsp'">
+		<i class="fas fa-window-close"></i> Eliminar usuario
 	</button>
 	
-	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarcliente.jsp'">
-		<i class="fas fa-external-link-square-alt"></i> Actualizar cliente
+	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarusuario.jsp'">
+		<i class="fas fa-external-link-square-alt"></i> Actualizar usuario
 	</button>
 	
-	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarcliente.jsp'">
-		<i class="fas fa-search-plus"></i> Buscar cliente
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarusuario.jsp'">
+		<i class="fas fa-search-plus"></i> Buscar usuario
 	</button>
 	
-	<button type="button" class="btn btn-warning" onclick="window.location.href='/insertarcliente.jsp'">
-		<i class="fas fa-clipboard"></i> Listar todos los clientes
+	<button type="button" class="btn btn-warning">
+		<i class="fas fa-clipboard"></i> Listar todos los usuarios
 	</button>
 	
 	</div>
+	
+	
 	<br>
+
 	
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">
 		<div class="row justify-content-between">
 			<div class="col-4">
-				<a class="navbar-brand links" href="#"><i class="fas fa-code"></i>
-					Diseñado y programado por Grupo 8 <i
-					class="fas fa-code-branch"></i></a>
+				<a class="navbar-brand links" href="#"><i class="fas fa-barcode"></i>
+					Grupo 8 
+					</a>
 			</div>
 		</div>
 	</nav>
 	<script>
-		function enviar() {
+		function actualizar() {
+			var x = document.getElementById("user").value;
 			var y = document.getElementById("cedula_cliente").value;
 			var req = new XMLHttpRequest();
 			var coincidencia = false;
 			req.open('GET', 'http://localhost:8080/listarclientes', false);
 			req.send(null);
-			var clientes=null;
+			var clientes = null;
 			if (req.status == 200)
-				clientes=JSON.parse(req.responseText);
-			  	console.log(JSON.parse(req.responseText));
-			  	
+				usuarios = JSON.parse(req.responseText);
+			console.log(JSON.parse(req.responseText));
 			for (i = 0; i < clientes.length; i++) {
+				console.log(clientes[i].cliente);
 				console.log(clientes[i].cedula_cliente);
-			
-				
-				if (clientes[i].cedula_cliente ==y ) {
-					console.log(clientes[i].cedula_cliente +" "+y);	
-					coincidencia =true
+				if (clientes[i].cliente === x) {
+					console.log(clientes[i].cliente + " " + x);
+					coincidencia = true
+					break;
+				}
+				if (clientes[i].cedula_cliente === y) {
+					console.log(clientes[i].cedula_cliente + " " + y);
+					coincidencia = true
 					break;
 				}
 			}
-			console.log(coincidencia);	
-			
-			if (coincidencia==false){
+			console.log(coincidencia);
+			if (coincidencia != false) {
 				var formData = new FormData();
-	 			formData.append("cedula_cliente", document.getElementById("cedula_cliente").value);
-	 			formData.append("telefono_cliente", document.getElementById("telefono_cliente").value);
-	 			formData.append("nombre_cliente", document.getElementById("nombre_cliente").value);
-	 			formData.append("correo_cliente",document.getElementById("correo_cliente").value);
-	 			formData.append("direccion_cliente",document.getElementById("direccion_cliente").value);
-	 			var xhr = new XMLHttpRequest();
-	 			xhr.open("POST", "http://localhost:8080/registrarcliente");
-	 			
+				formData.append("cedula_cliente", document
+						.getElementById("cedula_cliente").value);
+				formData.append("telefono_cliente", document
+						.getElementById("telefono_cliente").value);
+				formData.append("nombre_cliente", document
+						.getElementById("nombre_cliente").value);
+				formData.append("correo_cliente",
+						document.getElementById("correo_cliente").value);
+				formData.append("direccion_cliente",
+						document.getElementById("direccion_cliente").value);
+				var xhr = new XMLHttpRequest();
+				xhr.open("PUT", "http://localhost:8080/actualizarclientes");
 				var element = document.getElementById("error");
 				element.classList.add("visually-hidden");
 				var element2 = document.getElementById("correcto");
 				element2.classList.remove("visually-hidden");
-				
 				document.getElementById("cedula_cliente").value = "";
 				document.getElementById("telefono_cliente").value = "";
 				document.getElementById("nombre_cliente").value = "";
 				document.getElementById("correo_cliente").value = "";
 				document.getElementById("direccion_cliente").value = "";
-	 			xhr.send(formData);
-
-			}else{
+				xhr.send(formData);
+			} else {
 				var element = document.getElementById("error");
 				element.classList.remove("visually-hidden");
 				var element2 = document.getElementById("correcto");
 				element2.classList.add("visually-hidden");
-				document.getElementById("cedula_cliente").value = "";
+				document.getElementById("cedula_usuario").value = "";
 				document.getElementById("telefono_cliente").value = "";
 				document.getElementById("nombre_cliente").value = "";
 				document.getElementById("correo_cliente").value = "";
 				document.getElementById("direccion_cliente").value = "";
-			}	
+			}
 		}
 	</script>
 

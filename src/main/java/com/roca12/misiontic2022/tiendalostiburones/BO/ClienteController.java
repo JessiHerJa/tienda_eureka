@@ -40,8 +40,8 @@ public class ClienteController {
 		return Dao.listaDeClientes();
 	}
 	
-	/*
-	@DeleteMapping("/eliminarCliente")
+	
+	@DeleteMapping("/eliminarcliente")
 	public void eliminarCliente(Integer cedula_cliente) {
 		ClienteDAO Dao = new ClienteDAO();
 		Dao.eliminarCliente(cedula_cliente);
@@ -52,7 +52,7 @@ public class ClienteController {
 		ClienteDAO Dao = new ClienteDAO();
 		Dao.registrarCliente(user);
 	}
-	*/
+	
 	
 	
 

@@ -36,7 +36,7 @@
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 				var clientes = JSON.parse(xmlhttp.responseText);
-				var tbltop = "<table class='table table-dark table-striped'><tr><th>Cedula</th><th>Telefono</th><th>Nombre</th><th>Correo</th><th>Direccion</th></tr>";
+				var tbltop = "<table class='table table-striped table-hover'><tr><th>Cedula</th><th>Telefono</th><th>Nombre</th><th>Correo</th><th>Direccion</th></tr>";
 				var main = "";
 				for (i = 0; i < clientes.length; i++) {
 					main += "<tr><td>" + clientes[i].cedula_cliente
@@ -63,7 +63,7 @@
 <body>
 	<!-- Navbar-->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Tienda Eureka</a>
+  <a class="navbar-brand" href="#"> Tienda Eureka</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -93,31 +93,7 @@
 		</div>
 	</nav>
 	
-	<br>		
-	<div class="container">
-
-	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarcliente.jsp'">
-		<i class="fas fa-chalkboard-teacher"></i> Agregar cliente
-	</button>
 	
-	<button type="button" class="btn btn-secondary">
-		<i class="fas fa-window-close"></i> Eliminar cliente
-	</button>
-	
-	<button type="button" class="btn btn-success">
-		<i class="fas fa-external-link-square-alt"></i> Actualizar cliente
-	</button>
-	
-	<button type="button" class="btn btn-danger">
-		<i class="fas fa-search-plus"></i> Buscar cliente
-	</button>
-	
-	<button type="button" class="btn btn-warning">
-		<i class="fas fa-clipboard"></i> Listar todos los clientes
-	</button>
-	
-	</div>
-	<br>
 	
 	
 	<!-- contenido  -->
@@ -125,7 +101,7 @@
 	<div style="padding-left: 5px;">
 	
 		<div class="alert alert-warning" role="alert">
-		  <h1 ><i class="fas fa-table"></i> Tabla de clientes</h1>
+		  <h2 style="text-align:center;"><i class="fas fa-table"></i> Tabla de clientes</h2>
 		</div>
 		
 			<div class="container">
@@ -137,6 +113,34 @@
 	
 				</div>
 			</div>
+			
+	<br>		
+	<div class="container-opciones">
+
+	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarcliente.jsp'">
+		<i class="fas fa-chalkboard-teacher"></i> Agregar clientes
+	</button>
+	
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/insertarcliente.jsp'">
+		<i class="fas fa-window-close"></i> Eliminar clientes
+	</button>
+	
+	<button type="button" class="btn btn-success" >
+		<i class="fas fa-external-link-square-alt"></i> Actualizar cientes
+	</button>
+	
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarcliente.jsp'">
+		<i class="fas fa-search-plus"></i> Buscar clientes
+	</button>
+	
+	<button type="button" class="btn btn-warning">
+		<i class="fas fa-clipboard"></i> Listar todos los clientes
+	</button>
+	
+	</div>
+	
+	
+	<br>
 	
 		
 		<nav class="navbar fixed-bottom navbar-dark bg-dark">
