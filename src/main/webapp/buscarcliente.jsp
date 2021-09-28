@@ -48,21 +48,20 @@
 </nav>
 
 	<!-- Navbar modulos-->
-	<nav class="navbar navbar-dark bg-primary">
+		<nav class="navbar navbar-dark bg-primary">
 		<div class="container">
-			<a class="navbar-brand links" href="listausuarios.jsp"> <i
-				class="fas fa-users"></i> Usuarios
-			</a> <a class="navbar-brand links" href="listaclientes.jsp"> <i
-				class="fas fa-address-book"></i> Clientes
-			</a> <a class="navbar-brand links" href="listaproveedores.jsp"> <i
-				class="fas fa-truck"></i> Proveedores
-			</a> <a class="navbar-brand links" href="listaproductos.jsp"> <i
-				class="fas fa-apple-alt"></i> Productos
-			</a> <a class="navbar-brand links" href="listaventas.jsp"> <i
-				class="fas fa-money-check-alt"></i> Ventas
-			</a> <a class="navbar-brand links" href="listareportes.jsp"> <i
-				class="fas fa-clipboard-list"></i> Reportes
-			</a>
+			<a class="navbar-brand links" href="listausuarios.jsp">
+			<i class="fas fa-users"></i> Usuarios</a> 
+			<a class="navbar-brand links" href="listaclientes.jsp">
+			<i class="fas fa-address-book"></i> Clientes</a>
+			<a class="navbar-brand links" href="listaproveedores.jsp">
+			<i class="fas fa-truck"></i> Proveedores</a>
+			<a class="navbar-brand links" href="listaproductos.jsp">
+			<i class="fas fa-apple-alt"></i> Productos</a>
+			<a class="navbar-brand links" href="listaventas.jsp">
+			<i class="fas fa-money-check-alt"></i> Ventas</a>
+			<a class="navbar-brand links" href="listareportes.jsp">
+			<i class="fas fa-clipboard-list"></i> Reportes</a>
 		</div>
 	</nav>
 	
@@ -97,6 +96,7 @@
 						aria-describedby="basic-addon1" required id="cedula_cliente">
 					
 				</div>
+				<br>
 				<button type="button" class="btn btn-primary" onclick="enviar()">
 					<i class="fas fa-search"></i> Buscar cliente
 					</button>
@@ -132,36 +132,33 @@
 
 			</form>
 			</div>
-			<br>
-			<br>
-			
-			
-			
-				
+			<br>		
 	<div class="container-opciones">
 
 	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarcliente.jsp'">
-		<i class="fas fa-chalkboard-teacher"></i> Agregar cliente
+		<i class="fas fa-chalkboard-teacher"></i> Agregar clientes
 	</button>
 	
 	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarcliente.jsp'">
-		<i class="fas fa-window-close"></i> Eliminar cliente
+		<i class="fas fa-window-close"></i> Eliminar clientes
 	</button>
 	
 	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarcliente.jsp'">
-		<i class="fas fa-external-link-square-alt"></i> Actualizar cliente
+		<i class="fas fa-external-link-square-alt"></i> Actualizar cientes
 	</button>
 	
 	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarcliente.jsp'">
-		<i class="fas fa-search-plus"></i> Buscar cliente
+		<i class="fas fa-search-plus"></i> Buscar clientes
 	</button>
 	
-	<button type="button" class="btn btn-warning">
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarclientes.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los clientes
 	</button>
 	
 	</div>
-
+	
+	
+	<br>
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">
 		<div class="row justify-content-between">
 			<div class="col-4">
@@ -176,7 +173,7 @@
 				
 				var req = new XMLHttpRequest();
 				var coincidencia = false;
-				var user=   document.getElementById("usersearch").value;
+				var user=   document.getElementById("cedula_cliente").value;
 				req.open('GET', 'http://localhost:8080/consultarcliente?cliente='+user, false);
 				req.send(null);
 				var cliente = null;
@@ -190,16 +187,16 @@
 				var element2 = document.getElementById("correcto");
 				element2.classList.remove("visually-hidden");
 				
-				console.log(usuario.toString());
+				console.log(cliente.toString());
 				
-			if (usuario.toString()!=""){
+			if (cliente.toString()!=""){
 				document.getElementById("cedula_cliente").value = cliente[0].cedula_cliente;
 				document.getElementById("telefono_cliente").value = cliente[0].telefono_cliente;
 				document.getElementById("nombre_cliente").value = cliente[0].nombre_cliente;
 				document.getElementById("correo_cliente").value = cliente[0].correo_cliente;
 				document.getElementById("direccion_cliente").value = cliente[0].direccion_cliente;
 				
-				document.getElementById("usersearch").value = "";
+				document.getElementById("cedula_cliente").value = "";
 			
 			} else {
 				var element = document.getElementById("error");

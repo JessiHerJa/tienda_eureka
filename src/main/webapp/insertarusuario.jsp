@@ -138,7 +138,7 @@
 			
 		</div>
 		
-		<br>		
+	<br>		
 	<div class="container-opciones">
 
 	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
@@ -149,7 +149,7 @@
 		<i class="fas fa-window-close"></i> Eliminar usuario
 	</button>
 	
-	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarusuario.jsp'" >
+	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarusuario.jsp'">
 		<i class="fas fa-external-link-square-alt"></i> Actualizar usuario
 	</button>
 	
@@ -157,13 +157,16 @@
 		<i class="fas fa-search-plus"></i> Buscar usuario
 	</button>
 	
-	<button type="button" class="btn btn-warning">
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarusuarios.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los usuarios
 	</button>
 	
 	</div>
+	
+	
+	<br>
 
-	</div>
+	
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">
 		<div class="row justify-content-between">
 			<div class="col-4">

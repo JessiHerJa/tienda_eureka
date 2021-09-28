@@ -129,24 +129,24 @@
 				<br>		
 	<div class="container-opciones">
 
-	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
-		<i class="fas fa-chalkboard-teacher"></i> Agregar usuario
+	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarcliente.jsp'">
+		<i class="fas fa-chalkboard-teacher"></i> Agregar clientes
 	</button>
 	
-	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarusuario.jsp'">
-		<i class="fas fa-window-close"></i> Eliminar usuario
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarcliente.jsp'">
+		<i class="fas fa-window-close"></i> Eliminar clientes
 	</button>
 	
-	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarusuario.jsp'">
-		<i class="fas fa-external-link-square-alt"></i> Actualizar usuario
+	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarcliente.jsp'">
+		<i class="fas fa-external-link-square-alt"></i> Actualizar cientes
 	</button>
 	
-	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarusuario.jsp'">
-		<i class="fas fa-search-plus"></i> Buscar usuario
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarcliente.jsp'">
+		<i class="fas fa-search-plus"></i> Buscar clientes
 	</button>
 	
-	<button type="button" class="btn btn-warning">
-		<i class="fas fa-clipboard"></i> Listar todos los usuarios
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarclientes.jsp'">
+		<i class="fas fa-clipboard"></i> Listar todos los clientes
 	</button>
 	
 	</div>
@@ -166,7 +166,7 @@
 	</nav>
 	<script>
 		function actualizar() {
-			var x = document.getElementById("user").value;
+			
 			var y = document.getElementById("cedula_cliente").value;
 			var req = new XMLHttpRequest();
 			var coincidencia = false;
@@ -174,17 +174,14 @@
 			req.send(null);
 			var clientes = null;
 			if (req.status == 200)
-				usuarios = JSON.parse(req.responseText);
+				clientes = JSON.parse(req.responseText);
 			console.log(JSON.parse(req.responseText));
 			for (i = 0; i < clientes.length; i++) {
 				console.log(clientes[i].cliente);
 				console.log(clientes[i].cedula_cliente);
-				if (clientes[i].cliente === x) {
-					console.log(clientes[i].cliente + " " + x);
-					coincidencia = true
-					break;
-				}
-				if (clientes[i].cedula_cliente === y) {
+				
+				
+				if (clientes[i].cedula_cliente == y) {
 					console.log(clientes[i].cedula_cliente + " " + y);
 					coincidencia = true
 					break;

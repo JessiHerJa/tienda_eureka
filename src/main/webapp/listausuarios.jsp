@@ -85,7 +85,7 @@
 			<i class="fas fa-address-book"></i> Clientes</a>
 			<a class="navbar-brand links" href="listausuarios.jsp">
 			<i class="fas fa-truck"></i> Proveedores</a>
-			<a class="navbar-brand links" href="listausuarios.jsp">
+			<a class="navbar-brand links" href="listaproveedores.jsp">
 			<i class="fas fa-apple-alt"></i> Productos</a>
 			<a class="navbar-brand links" href="listausuarios.jsp">
 			<i class="fas fa-money-check-alt"></i> Ventas</a>
@@ -134,7 +134,7 @@
 		<i class="fas fa-search-plus"></i> Buscar usuario
 	</button>
 	
-	<button type="button" class="btn btn-warning">
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarusuarios.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los usuarios
 	</button>
 	

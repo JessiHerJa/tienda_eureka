@@ -71,7 +71,7 @@
 	
 	<!-- contenido  -->
 
-	<div style="padding-left: 5px">
+
 	
 	
 	<div class="alert alert-warning" role="alert">
@@ -134,12 +134,9 @@
 				</div>
 				
 				</form>
+				</div>
 			<br>
-			<br>
-			
-			
-			
-				
+			<br>		
 	<div class="container-opciones">
 
 	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
@@ -158,11 +155,14 @@
 		<i class="fas fa-search-plus"></i> Buscar usuario
 	</button>
 	
-	<button type="button" class="btn btn-warning">
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarusuarios.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los usuarios
 	</button>
 	
 	</div>
+	<br>
+	<br>
+	<br>
 
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">
 		<div class="row justify-content-between">

@@ -126,7 +126,7 @@
 
 			
 
-				<br>		
+				<br><br>		
 	<div class="container-opciones">
 
 	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
@@ -145,7 +145,7 @@
 		<i class="fas fa-search-plus"></i> Buscar usuario
 	</button>
 	
-	<button type="button" class="btn btn-warning">
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarusuarios.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los usuarios
 	</button>
 	
@@ -178,13 +178,9 @@
 			console.log(JSON.parse(req.responseText));
 			for (i = 0; i < usuarios.length; i++) {
 				console.log(usuarios[i].usuario);
-				console.log(usuarios[i].cedula_usuario);
-				if (usuarios[i].usuario === x) {
-					console.log(usuarios[i].usuario + " " + x);
-					coincidencia = true
-					break;
-				}
-				if (usuarios[i].cedula_usuario === y) {
+				
+				
+				if (usuarios[i].cedula_usuario == y) {
 					console.log(usuarios[i].cedula_usuario + " " + y);
 					coincidencia = true
 					break;
@@ -204,7 +200,7 @@
 				formData.append("usuario",
 						document.getElementById("user").value);
 				var xhr = new XMLHttpRequest();
-				xhr.open("PUT", "http://localhost:8080/actualizarusuarios");
+				xhr.open("PUT", 'http://localhost:8080/actualizarusuarios');
 				var element = document.getElementById("error");
 				element.classList.add("visually-hidden");
 				var element2 = document.getElementById("correcto");

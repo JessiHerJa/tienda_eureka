@@ -105,37 +105,33 @@
 			</form>
 			</div>
 			<br>
-			<br>
-			<br>
-			
-			
-			
-				
+	<br>		
 	<div class="container-opciones">
 
 	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
 		<i class="fas fa-chalkboard-teacher"></i> Agregar usuario
 	</button>
 	
-	<button type="button" class="btn btn-secondary">
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarusuario.jsp'">
 		<i class="fas fa-window-close"></i> Eliminar usuario
 	</button>
 	
-	<button type="button" class="btn btn-success">
+	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarusuario.jsp'">
 		<i class="fas fa-external-link-square-alt"></i> Actualizar usuario
 	</button>
 	
-	<button type="button" class="btn btn-danger">
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarusuario.jsp'">
 		<i class="fas fa-search-plus"></i> Buscar usuario
 	</button>
 	
-	<button type="button" class="btn btn-warning">
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarusuarios.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los usuarios
 	</button>
 	
 	</div>
-
-	</div>
+	
+	
+	<br>
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">
 		<div class="row justify-content-between">
 			<div class="col-4">
