@@ -83,13 +83,13 @@
 			<i class="fas fa-users"></i> Usuarios</a> 
 			<a class="navbar-brand links" href="listaclientes.jsp">
 			<i class="fas fa-address-book"></i> Clientes</a>
-			<a class="navbar-brand links" href="listausuarios.jsp">
+			<a class="navbar-brand links" href="listaproveedores.jsp">
 			<i class="fas fa-truck"></i> Proveedores</a>
 			<a class="navbar-brand links" href="listaproductos.jsp">
 			<i class="fas fa-apple-alt"></i> Productos</a>
-			<a class="navbar-brand links" href="listausuarios.jsp">
+			<a class="navbar-brand links" href="listaventas.jsp">
 			<i class="fas fa-money-check-alt"></i> Ventas</a>
-			<a class="navbar-brand links" href="listausuarios.jsp">
+			<a class="navbar-brand links" href="listareportes.jsp">
 			<i class="fas fa-clipboard-list"></i> Reportes</a>
 		</div>
 	</nav>
@@ -118,23 +118,23 @@
 	<br>		
 	<div class="container-opciones">
 
-	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarusuario.jsp'">
+	<button type="button" class="btn btn-success" onclick="window.location.href='/insertarusuario.jsp'">
 		<i class="fas fa-chalkboard-teacher"></i> Agregar usuario
 	</button>
 	
-	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarusuario.jsp'">
-		<i class="fas fa-window-close"></i> Eliminar usuario
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/eliminarusuario.jsp'">
+		<i class="fas fa-window-close "></i> Eliminar usuario
 	</button>
 	
-	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarusuario.jsp'">
+	<button type="button" class="btn btn-primary" onclick="window.location.href='/actualizarusuario.jsp'">
 		<i class="fas fa-external-link-square-alt"></i> Actualizar usuario
 	</button>
 	
-	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarusuario.jsp'">
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/buscarusuario.jsp'">
 		<i class="fas fa-search-plus"></i> Buscar usuario
 	</button>
 	
-	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarusuarios.jsp'">
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/listarusuarios.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los usuarios
 	</button>
 	

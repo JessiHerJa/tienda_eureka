@@ -117,23 +117,23 @@
 	<br>		
 	<div class="container-opciones">
 
-	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarcliente.jsp'">
-		<i class="fas fa-chalkboard-teacher"></i> Agregar clientes
+	<button type="button" class="btn btn-success" onclick="window.location.href='/insertarcliente.jsp'">
+		<i class="fas fa-chalkboard-teacher"></i> Agregar cliente
 	</button>
 	
-	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarcliente.jsp'">
-		<i class="fas fa-window-close"></i> Eliminar clientes
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/eliminarcliente.jsp'">
+		<i class="fas fa-window-close "></i> Eliminar cliente
 	</button>
 	
-	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarcliente.jsp'">
-		<i class="fas fa-external-link-square-alt"></i> Actualizar cientes
+	<button type="button" class="btn btn-primary" onclick="window.location.href='/actualizarcliente.jsp'">
+		<i class="fas fa-external-link-square-alt"></i> Actualizar cliente
 	</button>
 	
-	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarcliente.jsp'">
-		<i class="fas fa-search-plus"></i> Buscar clientes
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/buscarcliente.jsp'">
+		<i class="fas fa-search-plus"></i> Buscar cliente
 	</button>
 	
-	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarclientes.jsp'">
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/listarclientes.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los clientes
 	</button>
 	
