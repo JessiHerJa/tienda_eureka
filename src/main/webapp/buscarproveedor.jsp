@@ -92,7 +92,7 @@
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1">NIT Proveedor</span> <input
 						type="text" class="form-control"
-						placeholder="  Inserte su cédula aquí"
+						placeholder="  Inserte NIT del proveedor aquí"
 						aria-describedby="basic-addon1" required id="nit_proveedor">
 					
 				</div>
@@ -135,23 +135,23 @@
 			<br>		
 	<div class="container-opciones">
 
-	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarcliente.jsp'">
-		<i class="fas fa-chalkboard-teacher"></i> Agregar proveedor
+	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarproveedor.jsp'">
+		<i class="fas fa-chalkboard-teacher"></i> Agregar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarcliente.jsp'">
-		<i class="fas fa-window-close"></i> Eliminar proveedor
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarproveedor.jsp'">
+		<i class="fas fa-window-close"></i> Eliminar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarcliente.jsp'">
-		<i class="fas fa-external-link-square-alt"></i> Actualizar proveedor
+	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarproveedor.jsp'">
+		<i class="fas fa-external-link-square-alt"></i> Actualizar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarcliente.jsp'">
-		<i class="fas fa-search-plus"></i> Buscar proveedor
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarproveedor.jsp'">
+		<i class="fas fa-search-plus"></i> Buscar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarclientes.jsp'">
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarproveedores.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los proveedores
 	</button>
 	
@@ -170,11 +170,11 @@
 	</nav>
 	<script>
 		function enviar() {
-				
+
 				var req = new XMLHttpRequest();
 				var coincidencia = false;
-				var user=   document.getElementById("cedula_cliente").value;
-				req.open('GET', 'http://localhost:8080//consultarproveedor'+user, false);
+				var user=   document.getElementById("nit_proveedor").value;
+				req.open('GET', 'http://localhost:8080//consultarproveedor?nit='+user, false);
 				req.send(null);
 				var cliente = null;
 				if (req.status == 200)
@@ -193,7 +193,7 @@
 				document.getElementById("nit_proveedor").value = cliente[0].nit_proveedor;
 				document.getElementById("ciudad_proveedor").value = cliente[0].ciudad_proveedor;
 				document.getElementById("direccion_proveedor").value = cliente[0].direccion_proveedor;
-				document.getElementById("nombre_proveedor).value = cliente[0].nombre_proveedor;
+				document.getElementById("nombre_proveedor").value = cliente[0].nombre_proveedor;
 				document.getElementById("telefono_proveedor").value = cliente[0].telefono_proveedor;
 				
 				document.getElementById("nit_proveedor").value = "";

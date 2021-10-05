@@ -129,23 +129,23 @@
 				<br>		
 	<div class="container-opciones">
 
-	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarcliente.jsp'">
-		<i class="fas fa-chalkboard-teacher"></i> Agregar proveedor
+	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarproveedor.jsp'">
+		<i class="fas fa-chalkboard-teacher"></i> Agregar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarcliente.jsp'">
-		<i class="fas fa-window-close"></i> Eliminar proveedor
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarproveedor.jsp'">
+		<i class="fas fa-window-close"></i> Eliminar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarcliente.jsp'">
-		<i class="fas fa-external-link-square-alt"></i> Actualizar proveedor
+	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarproveedor.jsp'">
+		<i class="fas fa-external-link-square-alt"></i> Actualizar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarcliente.jsp'">
-		<i class="fas fa-search-plus"></i> Buscar proveedor
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarproveedor.jsp'">
+		<i class="fas fa-search-plus"></i> Buscar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarclientes.jsp'">
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarproveedores.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los proveedores
 	</button>
 	

@@ -94,7 +94,7 @@
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1">NIT</span> <input
 						type="text" class="form-control"
-						placeholder=" Inserte cedula aqui..."
+						placeholder=" Inserte NIT aqui..."
 						aria-describedby="basic-addon1" required id="nit_proveedor">
 				</div>
 				<button type="button" class="btn btn-danger" onclick="eliminar()">
@@ -106,23 +106,23 @@
 	<br>		
 	<div class="container-opciones">
 
-	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarcliente.jsp'">
-		<i class="fas fa-chalkboard-teacher"></i> Agregar proveedor
+	<button type="button" class="btn btn-primary" onclick="window.location.href='/insertarproveedor.jsp'">
+		<i class="fas fa-chalkboard-teacher"></i> Agregar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarcliente.jsp'">
-		<i class="fas fa-window-close"></i> Eliminar proveedor
+	<button type="button" class="btn btn-secondary" onclick="window.location.href='/eliminarproveedor.jsp'">
+		<i class="fas fa-window-close"></i> Eliminar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarcliente.jsp'">
-		<i class="fas fa-external-link-square-alt"></i> Actualizar proveedor
+	<button type="button" class="btn btn-success" onclick="window.location.href='/actualizarproveedor.jsp'">
+		<i class="fas fa-external-link-square-alt"></i> Actualizar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarcliente.jsp'">
-		<i class="fas fa-search-plus"></i> Buscar proveedor
+	<button type="button" class="btn btn-danger" onclick="window.location.href='/buscarproveedor.jsp'">
+		<i class="fas fa-search-plus"></i> Buscar proveedores
 	</button>
 	
-	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarclientes.jsp'">
+	<button type="button" class="btn btn-warning" onclick="window.location.href='/listarproveedores.jsp'">
 		<i class="fas fa-clipboard"></i> Listar todos los proveedores
 	</button>
 	
@@ -167,7 +167,7 @@
 				var cedula=document.getElementById("nit_proveedor").value;
 				
 				var xhr = new XMLHttpRequest();
-				xhr.open("DELETE", "http://localhost:8080/eliminarproveedor?nit_proveedor="+cedula);
+				xhr.open("DELETE", "http://localhost:8080/eliminarproveedor?nit="+cedula);
 				
 				var element = document.getElementById("error");
 				element.classList.add("visually-hidden");
