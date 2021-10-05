@@ -29,21 +29,22 @@
 
 
 <script>
-	var baseurl = "http://localhost:8080/listarusuarios";
+	var baseurl = "http://localhost:8080/listarproductos";
 	function loadusuarios() {
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("GET", baseurl, true);
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 				var usuarios = JSON.parse(xmlhttp.responseText);
-				var tbltop = "<table class='table table-striped table-hover'><tr><th>Cedula</th><th>Email</th><th>Nombre</th><th>Password</th><th>Usuario</th></tr>";
+				var tbltop = "<table class='table table-striped table-hover'><tr><th>Código Producto</th><th>Iva compra</th><th>NIT proveedor</th><th>Nombre producto</th><th>Precio compra</th><th>Precio venta</th></tr>";
 				var main = "";
 				for (i = 0; i < usuarios.length; i++) {
-					main += "<tr><td>" + usuarios[i].cedula_usuario
-							+ "</td><td>" + usuarios[i].email_usuario
-							+ "</td><td>" + usuarios[i].nombre_usuario
-							+ "</td><td>" + usuarios[i].password + "</td><td>"
-							+ usuarios[i].usuario + "</td></tr>";
+					main += "<tr><td>" + usuarios[i].codigo_producto
+							+ "</td><td>" + usuarios[i].iva_compra
+							+ "</td><td>" + usuarios[i].nit_proveedor
+							+ "</td><td>" + usuarios[i].nombre_producto
+							+ "</td><td>" + usuarios[i].precio_compra + "</td><td>"
+							+ usuarios[i].precio_venta + "</td></tr>";
 				}
 				var tblbottom = "</table>";
 				var tbl = tbltop + main + tblbottom;
@@ -106,7 +107,7 @@
 				<div class="row">
 					<!--  Aqui es donde se autogenera la tabla basado en el script -->
 					<div class="col align-self-center" id="usuariosinfo">
-					
+
 					</div>
 	
 				</div>
