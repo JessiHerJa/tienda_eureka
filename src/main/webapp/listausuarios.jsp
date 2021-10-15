@@ -81,7 +81,7 @@
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link  active" href="../pages/tables.html">
+          <a class="nav-link  active" href="listausuarios.jsp">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -101,7 +101,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/dashboard.html">
+          <a class="nav-link  " href="listaclientes.jsp">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>shop </title>
@@ -121,7 +121,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/billing.html">
+          <a class="nav-link  " href="listaproveedores.jsp">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>credit-card</title>
@@ -141,7 +141,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/virtual-reality.html">
+          <a class="nav-link  " href="listaproductos.jsp">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>box-3d-50</title>
@@ -162,7 +162,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/rtl.html">
+          <a class="nav-link  " href="listaventas.jsp">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>settings</title>
@@ -224,6 +224,13 @@
       </div>
     </nav>
     <!-- End Navbar -->
+    <div class="ms-auto text-end">
+   		<a class="btn btn-link text-dark text-gradient px-3 mb-0" href="insertarusuario.jsp"><i class="fas fa-pencil-alt text-dark me-2"></i>Agregar usuario</a>	
+   		<a class="btn btn-link text-dark px-3 mb-0" href="buscarusuario.jsp"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Buscar usuario</a>
+   		<a class="btn btn-link text-dark text-gradient px-3 mb-0" href="actualizarusuario.jsp"><i class="fas fa-pencil-alt text-dark me-2"></i>Actualizar usuario</a>
+   		<a class="btn btn-link text-danger text-gradient px-3 mb-0" href="eliminarusuario.jsp"><i class="far fa-trash-alt me-2"></i>Eliminar usuario</a>
+   		<a class="btn btn-link text-dark px-3 mb-0" href="listausuarios.jsp"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Listado completa</a>		
+   </div>
     <div class="container-fluid py-4">
       <div class="row">
         <div class="col-12">
@@ -236,7 +243,7 @@
   
               </div>
             </div>
-          </div>
+          </div>	
         </div>
       </div>
 
