@@ -1,110 +1,163 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<!-- paquete de caracteres -->
-<meta charset="utf-8">
-<!-- Tamaño de la pantalla -->
-<meta name="viewport" content="width=device-width">
-<!-- titulo de la pestaña -->
-<title>Tienda Eureka</title>
-
-<!-- bootstrap-->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-	crossorigin="anonymous">
-
-<!-- font awesome -->
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-	integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-	crossorigin="anonymous">
-
-<!-- Cargando mi hoja de estilo -->
-<link href="style.css" rel="stylesheet" type="text/css" />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <title>
+    Tienda Eureka
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
 </head>
 
-<body>
-	<!-- Navbar-->
-	<nav class="navbar navbar-light bg-ligth">
-		<div class="container-fluid">
-			<a class="navbar-brand links" href="index.html"> <i
-				class="fas fa-home"></i> Tienda Eureka
-			</a>
-		</div>
-	</nav>
-	
-	<!-- Contenedor de los botones y texto -->
-	<div class="container">
-		<div class="position-absolute top-50 start-50 translate-middle login">
-			<H1 class="titulologin">
-				<i class="fas fa-bardcode"></i> Bienvenidos
-			</H1>
-			<div class="input-group mb-3">
-				<span class="input-group-text" id="basic-addon1"><i
-					class="fas fa-user-shield"></i></span> 
-					<input id="inputuser" type="text"
-					class="form-control" placeholder="Username" aria-label="Username"
-					aria-describedby="basic-addon1">
-			</div>
-
-			<div class="input-group mb-3">
-				<span class="input-group-text" id="basic-addon1"><i
-					class="fas fa-key"></i> </span> <input id="inputpass" type="password"
-					class="form-control" placeholder="Password" aria-label="Password"
-					aria-describedby="basic-addon1">
-			</div>
-			<div style="margin: auto; text-align: center;">
-				<button type="button" class="btn btn-success" onclick="comparar()">
-					<i class="fas fa-sign-in-alt"></i> Iniciar Sesión
-				</button>
-				<button type="button" class="btn btn-warning">
-					<i class="fas fa-clipboard-list"></i> Registrarse
-				</button>
-				
-				<div id="error" class="alert alert-danger visually-hidden"
-					role="alert">Usuario o contraseña No valido XXXX!</div>
-
-			</div>
-		</div>
-	</div>
-
-	<nav class="navbar fixed-bottom navbar-dark bg-dark">
-		<div class="row justify-content-between">
-			<div class="col-4">
-				<a class="navbar-brand links" href="#"><i class="fas fa-barcode"></i>
-					Grupo 8 
-					</a>
-			</div>
-			<!--  
-			<div class="col-4">
-				<a class="navbar-brand links" href="https://github.com/roca12"><i
-					class="fab fa-github-square"></i> Github</a> <a
-					class="navbar-brand links" href=""><i class="fab fa-twitter"></i>
-					Twitter</a>
-			</div>
-			-->
-		</div>
-	</nav>
-	
-	<!-- Script que trae la informacion de la api y la compara con las entradas -->
-	<script>
+<body class="">
+  <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+          <div class="container-fluid">
+            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="../pages/dashboard.html">
+              Tienda Eureka
+            </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navigation">
+              <ul class="navbar-nav mx-auto">
+                
+                <li class="nav-item">
+                  <a class="nav-link me-2" href="../pages/sign-up.html">
+                    <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
+                    Sign Up
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-2" href="../pages/sign-in.html">
+                    <i class="fas fa-key opacity-6 text-dark me-1"></i>
+                    Sign In
+                  </a>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+      </div>
+    </div>
+  </div>
+  <main class="main-content  mt-0">
+    <section>
+      <div class="page-header min-vh-75">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
+              <div class="card card-plain mt-8">
+                <div class="card-header pb-0 text-left bg-transparent">
+                  <h3 class="font-weight-bolder text-info text-gradient">Bienvenidos</h3>
+                  <p class="mb-0">Ingrese su usuario y contraseña</p>
+                </div>
+                <div class="card-body">
+                  <form role="form">
+                    <label>Correo</label>
+                    <div class="mb-3">
+                      <input id="inputuser" type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="username">
+                    </div>
+                    <label>Contraseña</label>
+                    <div class="mb-3">
+                      <input id="inputpass" type="password" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="password-addon">
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
+                      <label class="form-check-label" for="rememberMe">Recordarme</label>
+                    </div>
+                    <div class="text-center">
+                      <button type="button" class="btn bg-gradient-info w-100 mt-4 mb-0" onclick="comparar()">Iniciar Sesión</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                  <p class="mb-4 text-sm mx-auto">
+                    tiene cuenta?
+                    <a href="javascript:;" class="text-info text-gradient font-weight-bold">Registrarse</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
+                <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url('../assets/img/curved-images/curved6.jpg')"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
+          <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+            <span class="text-lg fab fa-dribbble"></span>
+          </a>
+          <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+            <span class="text-lg fab fa-twitter"></span>
+          </a>
+          <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+            <span class="text-lg fab fa-instagram"></span>
+          </a>
+          <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+            <span class="text-lg fab fa-pinterest"></span>
+          </a>
+          <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+            <span class="text-lg fab fa-github"></span>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8 mx-auto text-center mt-1">
+          <p class="mb-0 text-secondary">
+            © 2021 Copyright <script>
+              document.write(new Date().getFullYear())
+            </script> Grupo 8
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
 		function comparar() {
 			//trayendo texto de input de username
 			var x = document.getElementById("inputuser").value;
 			//trayendo texto de input de password
 			var y = document.getElementById("inputpass").value;
-			//url de la api 
-			var baseurl = "http://localhost:8080/listarusuarios";
+			
 			//creando un objeto de manipulacion de solicitudes
+			var getUrl = window.location;
+			var baseUrl = getUrl.protocol + "//" + getUrl.host + "/"+ getUrl.pathname.split('/')[1];
 			var xmlhttp = new XMLHttpRequest();
-			//abriendo la api
-			xmlhttp.open("GET", baseurl, true);
+			
+			
+			xmlhttp.open("GET", baseUrl + "/listarusuarios", true);
 			//funcion interna que compara la información
 			xmlhttp.onreadystatechange = function() {
 				//si se obtiene un 200 (Conexion correcta)
@@ -159,7 +212,25 @@
 			xmlhttp.send();
 		}
 	</script>
-
+  <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
 </body>
 
 </html>
