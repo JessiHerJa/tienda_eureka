@@ -1,5 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<<<<<<< HEAD
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <title>
+    TIENDA EUREKA
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+  
+<script>
+=======
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +51,12 @@
   
 <script>
 
+>>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 
+	var getUrl = window.location;
+	var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+
+<<<<<<< HEAD
 	var getUrl = window.location;
 	var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 	
@@ -50,6 +81,11 @@
 		var xmlhttp = new XMLHttpRequest();
 		//xmlhttp.open("GET", baseUrl+"/listarusuarios", true);
 		xmlhttp.open("GET","http://localhost:8080/listarusuarios", true);
+=======
+	function loadusuarios() {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("GET", baseUrl+"/listarusuarios", true);
+>>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 				var usuarios = JSON.parse(xmlhttp.responseText);
@@ -180,7 +216,11 @@
           </a>
         </li>
         <li class="nav-item">
+<<<<<<< HEAD
           <a class="nav-link  " href="insertarventa.jsp">
+=======
+          <a class="nav-link  " href="listaventas.jsp">
+>>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>settings</title>
@@ -201,7 +241,11 @@
           </a>
         </li>
         <li class="nav-item">
+<<<<<<< HEAD
           <a class="nav-link  " href="reportes.jsp">
+=======
+          <a class="nav-link  " href="../pages/virtual-reality.html">
+>>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>box-3d-50</title>

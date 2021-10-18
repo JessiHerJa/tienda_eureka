@@ -3,10 +3,17 @@ package com.roca12.misiontic2022.tiendalostiburones.DTO;
 import java.io.Serializable;
 
 public class DetalleVentaVO implements Serializable{
+<<<<<<< HEAD
 	
 
 	private static final long serialVersionUID = -7823811509082856845L;
 	
+=======
+
+
+	private static final long serialVersionUID = -7823811509082856845L;
+
+>>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 	private Integer codigo_detalle_venta;
 	private Integer cantidad_producto;
 	private Integer codigo_producto;
@@ -56,7 +63,14 @@ public class DetalleVentaVO implements Serializable{
 	public void setValoriva(Double valoriva) {
 		this.valoriva = valoriva;
 	}
+<<<<<<< HEAD
 	
 	
 
 }
+=======
+
+
+
+}
+>>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
