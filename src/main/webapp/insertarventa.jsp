@@ -40,7 +40,7 @@
 		if (req.status == 200)
 			cont = JSON.parse(req.responseText);
 		console.log(cont.toString());
-		document.getElementById("consecutivo").value = cont;
+		document.getElementById("consecutivo").value = cont + 1;
 	};
 </script>
   
@@ -783,6 +783,8 @@
 			element2.classList.add("visually-hidden");
 		}
 	}
+	
+	
 	</script>
   
   

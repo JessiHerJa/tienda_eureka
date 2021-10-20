@@ -65,10 +65,10 @@
 	}
 	
 	
-	var baseurl = "http://localhost:8080/listarclientes";
+	var baseurl2 = "http://localhost:8080/listarclientes";
 	function loadclientes() {
 		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("GET", baseurl, true);
+		xmlhttp.open("GET", baseurl2, true);
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 				var clientes = JSON.parse(xmlhttp.responseText);
@@ -114,12 +114,40 @@
 	}
 	
 	
+	var baseurl6 = "http://localhost:8080/listarventas";
+	function loadventas() {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("GET", baseurl6, true);
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+				var ventas = JSON.parse(xmlhttp.responseText);
+				var tbltop = "<table class='table table-striped table-hover'><tr><th>Cedula cliente</th><th>Nombre cliente</th><th>valor venta</th></tr>";
+				var main = "";
+				for (i = 0; i < ventas.length; i++) {
+					main += "<tr><td>" + ventas[i].cedula_cliente
+							+ "</td><td>" + ventas[i].nombre_cliente
+							+ "</td><td>$ " + ventas[i].valor_venta
+							+ "</td></tr>";
+				}
+				var tblbottom = "</table>";
+				var tbl = tbltop + main + tblbottom;
+				document.getElementById("ventasinfo").innerHTML = tbl;
+			}
+		};
+		xmlhttp.send();
+	}
+	
+	
+	
+	
+	
+	
 	window.onload = function() {
 		loadusuarios();
 		loadclientes();
 		loadproveedores();
+		loadventas();
 	}
-	
 	
 </script>
 </head>
@@ -327,7 +355,7 @@
         </div>
       </div>
       
-      <div class="row">
+     <div class="row">
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">

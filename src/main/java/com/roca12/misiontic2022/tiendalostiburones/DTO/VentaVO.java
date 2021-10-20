@@ -1,6 +1,5 @@
 package com.roca12.misiontic2022.tiendalostiburones.DTO;
 
-<<<<<<< HEAD
 import java.io.Serializable;
 
 public class VentaVO implements Serializable {
@@ -8,29 +7,16 @@ public class VentaVO implements Serializable {
 	//identificador unico de las clases entidad
 		private static final long serialVersionUID = 1L;
 		
-=======
-
-import java.io.Serializable;
-
-public class VentaVO implements Serializable {
-
-	//identificador unico de las clases entidad
-		private static final long serialVersionUID = 1L;
-
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 		private Integer codigo_venta;
 		private Integer cedula_cliente;
 		private Integer cedula_usuario;
 		private Double ivaventa;
 		private Double total_venta;
 		private Double valor_venta;
-<<<<<<< HEAD
+		private String nombre_cliente;
+
 		
 				
-=======
-
-
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 		public Integer getCodigo_venta() {
 			return codigo_venta;
 		}
@@ -67,12 +53,12 @@ public class VentaVO implements Serializable {
 		public void setValor_venta(Double valor_venta) {
 			this.valor_venta = valor_venta;
 		}
-<<<<<<< HEAD
+		public String getNombre_cliente() {
+			return nombre_cliente;
+		}
+		public void setNombre_cliente(String nombre_cliente) {
+			this.nombre_cliente = nombre_cliente;
+		}
 		
 		
 }
-=======
-
-
-}
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1

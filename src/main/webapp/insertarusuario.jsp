@@ -119,11 +119,7 @@
           </a>
         </li>
         <li class="nav-item">
-<<<<<<< HEAD
           <a class="nav-link  " href="insertarventa.jsp">
-=======
-          <a class="nav-link  " href="listaventas.jsp">
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>settings</title>
@@ -144,11 +140,7 @@
           </a>
         </li>
         <li class="nav-item">
-<<<<<<< HEAD
           <a class="nav-link  " href="reportes.jsp">
-=======
-          <a class="nav-link  " href="../pages/virtual-reality.html">
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>box-3d-50</title>
@@ -210,7 +202,6 @@
 					role="alert">Error al crear el usuario, verifique que no exista un usuario con la cedula y usuario dados</div>
 					
 			<div id="correcto" class="alert alert-success visually-hidden"
-<<<<<<< HEAD
 				role="alert">Usuario creado con éxito</div>
 
           
@@ -224,34 +215,6 @@
 
                   <div class="row">
                     <div class="col-md-6 mb-md-0 mb-4">
-=======
-				role="alert">Usuario creado con exito</div>
-
-          
-            <div class="col-md-8">
-              <div class="card card-plain">
-
-                <div class="card-body">
-                  <form role="form" id="form1">
-                  
-<div classs="row">
-
-                  <div class="row">
-                    <div class="col-md-6 mb-md-0 mb-4">
-
-		 <label>Cédula</label>
-		 <div class="mb-1">
-		   <input type="text" required id="cedula_usuario" class="form-control" placeholder="Inserte su cédula aquí" aria-label="Email" aria-describedby="email-addon">
-		 </div>
-		 <label>Nombre Completo</label>
-		 <div class="mb-1">
-		   <input type="text" required id="nombre_usuario" class="form-control" placeholder="Inserte su nombre aquí" aria-label="Password" aria-describedby="password-addon">
-		 </div>
-		 <label>Password</label>
-		 <div class="mb-1">
-		   <input type="text" required id="password" class="form-control" placeholder="Inserte password aqui..." aria-label="Password" aria-describedby="password-addon">
-		 </div>
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 
 		 <label>Cédula</label>
 		 <div class="mb-1">
@@ -286,28 +249,6 @@
 
 	<div class="col-5">
 
-<<<<<<< HEAD
-=======
-                    </div>
-                    <div class="col-md-6">
-		 <label>Correo</label>
-		 <div class="mb-1">
-		   <input type="email" required id="email_usuario" class="form-control" placeholder="Inserte su correo aquí." aria-label="Password" aria-describedby="password-addon">
-		 </div>
-		 <label>Username</label>
-		 <div class="mb-1">
-		   <input type="text" required id="user" class="form-control" placeholder="Inserte username aquí" aria-label="Password" aria-describedby="password-addon">
-		 </div>
-                    </div>
-                  </div>
-
-
-
-
-
-	<div class="col-5">
-
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 	</div>
 </div>
 <div classs="row">

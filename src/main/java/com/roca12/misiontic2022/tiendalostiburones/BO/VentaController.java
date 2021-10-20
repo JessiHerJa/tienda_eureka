@@ -1,9 +1,6 @@
 package com.roca12.misiontic2022.tiendalostiburones.BO;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 import java.util.ArrayList;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,11 +15,7 @@ import com.roca12.misiontic2022.tiendalostiburones.DTO.VentaVO;
 
 @RestController
 public class VentaController {
-<<<<<<< HEAD
 	
-=======
-
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 	/*
 	 * @GetMapping obtener o buscar
 	 * @PostMapping insertar o agregar
@@ -53,24 +46,13 @@ public class VentaController {
 		VentaDAO Dao = new VentaDAO();
 		Dao.actualizarVenta(venta);
 	}
-<<<<<<< HEAD
 	
 	
-=======
-
-
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 	@GetMapping("/contadorventa")
 	public Integer contadorVentas() {
 		VentaDAO Dao = new VentaDAO();
 		return Dao.contadorVentas();
 	}
-<<<<<<< HEAD
 	
 	
 }
-=======
-
-
-}
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1

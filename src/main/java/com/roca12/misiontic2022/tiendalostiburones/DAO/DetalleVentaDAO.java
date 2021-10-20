@@ -1,8 +1,5 @@
 package com.roca12.misiontic2022.tiendalostiburones.DAO;
-<<<<<<< HEAD
 
-=======
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -94,10 +91,7 @@ public class DetalleVentaDAO {
 			System.out.println("No se pudo consultar todas las detalle_ventas");
 			System.out.println(e.getMessage());
 			System.out.println(e.getLocalizedMessage());
-<<<<<<< HEAD
 			e.printStackTrace();
-=======
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 		}
 
 		return listadetalle_ventas;

@@ -1,31 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<<<<<<< HEAD
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <title>
-    TIENDA EUREKA
-  </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-  <!-- Nucleo Icons -->
-  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link id="pagestyle" href="assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
-  
-<script>
-=======
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,71 +25,46 @@
   
 <script>
 
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 
-	var getUrl = window.location;
-	var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
-
-<<<<<<< HEAD
-	var getUrl = window.location;
-	var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
-	
-	window.addEventListener('DOMContentLoaded', event => {
-	    // Simple-DataTables
-	    // https://github.com/fiduswriter/Simple-DataTables/wiki
-		let table=null;
-	    if (datatablesuers) {
-	        table=new simpleDatatables.DataTable("#datatablesuers", {
-	            searchable: true,
-	            labels: {
-	                placeholder: "Buscar...",
-	                perPage: "{select} registros por pagina",
-	                noRows: "No hay registros",
-	                info: "Mostrando {start} a {end} de {rows} registros",
-	            }
-	        });
-	    }
+	//var getUrl = window.location;
+	//var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 	
 	
-	function loadusuarios() {
-		var xmlhttp = new XMLHttpRequest();
-		//xmlhttp.open("GET", baseUrl+"/listarusuarios", true);
-		xmlhttp.open("GET","http://localhost:8080/listarusuarios", true);
-=======
-	function loadusuarios() {
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("GET", baseUrl+"/listarusuarios", true);
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
-		xmlhttp.onreadystatechange = function() {
-			if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-				var usuarios = JSON.parse(xmlhttp.responseText);
-				
-				var tbltop = "<table class='table align-items-center mb-0'><thead><tr><th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'>Nombre - Email</th><th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2'>Cedula</th><th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'>Password</th><th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'>Usuario</th></tr> </thead><tbody>";
-				
-				var main = "";
-				for (i = 0; i < usuarios.length; i++) {
+	
+	    function loadusuarios() {
+			var xmlhttp = new XMLHttpRequest();
+			//xmlhttp.open("GET", baseUrl+"/listarusuarios", true);
+			xmlhttp.open("GET","http://localhost:8080/listarusuarios", true);
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+					var usuarios = JSON.parse(xmlhttp.responseText);
 					
-					main += "<tr><td>";
-					main += "<div class='d-flex px-2 py-1'>";
-					main += "<div>";
-					main += "<img src='assets/img/team-2.jpg' class='avatar avatar-sm me-3' alt='user1'>";
-					main += "</div>";
-					main += "<div class='d-flex flex-column justify-content-center'>"
-					main += "<h6 class='mb-0 text-sm'>" + usuarios[i].nombre_usuario + "</h6>";
-					main += "<p class='text-xs text-secondary mb-0'>" + usuarios[i].email_usuario + "</p>";
-					main += "</div>";
-					main += "</div>";
-					main += "</td><td><p class='text-xs text-secondary mb-0'>" + usuarios[i].cedula_usuario + "</p>";
-					main += "</td><td><span class='text-secondary text-xs font-weight-bold'>" + usuarios[i].password + "</span></td><td>"
-							+ usuarios[i].usuario + "</td></tr>";
+					var tbltop = "<table class='table align-items-center mb-0'><thead><tr><th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'>Nombre - Email</th><th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2'>Cedula</th><th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'>Password</th><th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'>Usuario</th></tr> </thead><tbody>";
+					
+					var main = "";
+					for (i = 0; i < usuarios.length; i++) {
+						
+						main += "<tr><td>";
+						main += "<div class='d-flex px-2 py-1'>";
+						main += "<div>";
+						main += "<img src='assets/img/team-2.jpg' class='avatar avatar-sm me-3' alt='user1'>";
+						main += "</div>";
+						main += "<div class='d-flex flex-column justify-content-center'>"
+						main += "<h6 class='mb-0 text-sm'>" + usuarios[i].nombre_usuario + "</h6>";
+						main += "<p class='text-xs text-secondary mb-0'>" + usuarios[i].email_usuario + "</p>";
+						main += "</div>";
+						main += "</div>";
+						main += "</td><td><p class='text-xs text-secondary mb-0'>" + usuarios[i].cedula_usuario + "</p>";
+						main += "</td><td><span class='text-secondary text-xs font-weight-bold'>" + usuarios[i].password + "</span></td><td>"
+								+ usuarios[i].usuario + "</td></tr>";
+					}
+					var tblbottom = "</tbody></table>";
+					var tbl = tbltop + main + tblbottom;
+					document.getElementById("usuariosinfo").innerHTML = tbl;
 				}
-				var tblbottom = "</tbody></table>";
-				var tbl = tbltop + main + tblbottom;
-				document.getElementById("usuariosinfo").innerHTML = tbl;
-			}
-		};
-		xmlhttp.send();
-	}
+			};
+			xmlhttp.send();
+		}
 	window.onload = function() {
 		loadusuarios();
 	}
@@ -216,11 +165,7 @@
           </a>
         </li>
         <li class="nav-item">
-<<<<<<< HEAD
-          <a class="nav-link  " href="insertarventa.jsp">
-=======
-          <a class="nav-link  " href="listaventas.jsp">
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
+          <a class="nav-link  " href="linsertarventa.jsp">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>settings</title>
@@ -241,11 +186,7 @@
           </a>
         </li>
         <li class="nav-item">
-<<<<<<< HEAD
           <a class="nav-link  " href="reportes.jsp">
-=======
-          <a class="nav-link  " href="../pages/virtual-reality.html">
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>box-3d-50</title>

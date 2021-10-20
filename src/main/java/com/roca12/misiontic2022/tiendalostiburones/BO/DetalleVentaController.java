@@ -14,11 +14,7 @@ import com.roca12.misiontic2022.tiendalostiburones.DTO.DetalleVentaVO;
 
 @RestController
 public class DetalleVentaController {
-<<<<<<< HEAD
 	
-=======
-
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 	/*
 	 * @GetMapping obtener o buscar
 	 * @PostMapping insertar o agregar
@@ -49,25 +45,14 @@ public class DetalleVentaController {
 		DetalleVentaDAO Dao = new DetalleVentaDAO();
 		Dao.actualizarDetalleVenta(venta);
 	}
-<<<<<<< HEAD
 	
 	
-=======
-
-
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
 	@GetMapping("/contadordetalleventa")
 	public Integer contadorVentas() {
 		DetalleVentaDAO Dao = new DetalleVentaDAO();
 		return Dao.contadorDetalleVenta();
 	}
-<<<<<<< HEAD
 	
 	
 }
 
-=======
-
-
-}
->>>>>>> e12ef01b1f064df83ff74d875355f0d683d70ef1
